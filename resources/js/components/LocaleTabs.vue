@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="locales.length > 1"
-    class="nova-translatable-locale-tabs flex select-none"
+    class="nova-translatable-locale-tabs flex md:flex-row select-none"
     :class="{ 'px-8': !this.detail }"
   >
     <div :class="listClasses" v-if="displayType != 'none'">
@@ -28,7 +28,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
-      if (this.displayType === 'row-left') return ['mt-1 md:mt-0 pb-5 px-6 md:px-8 w-full md:w-3/5 md:py-5'];
+      if (this.displayType === 'row-left') return ['mt-1 md:mt-0 pb-5 px-6 md:px-8 w-full md:inset-x-1/5 md:w-3/5 md:py-5'];
       return ['ml-auto'];
     },
   },
