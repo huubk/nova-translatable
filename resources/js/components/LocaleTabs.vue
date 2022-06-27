@@ -1,9 +1,10 @@
 <template>
   <div
     v-show="locales.length > 1"
-    class="nova-translatable-locale-tabs flex md:flex-row select-none"
+    class="nova-translatable-locale-tabs grid grid-cols-5"
     :class="{ 'px-8': !this.detail }"
   >
+    <div class="col-span-5 md:col-span-1"></div>
     <div :class="listClasses" v-if="displayType != 'none'">
       <a
         v-for="locale in locales"
@@ -28,7 +29,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
-      if (this.displayType === 'row-left') return ['mt-1 md:mt-0 pb-5 px-6 md:px-8 w-full md:inset-x-1/5 md:w-3/5 md:py-5'];
+      if (this.displayType === 'row-left') return ['col-span-5 md:col-span-3'];
       return ['ml-auto'];
     },
   },
