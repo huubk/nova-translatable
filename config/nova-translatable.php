@@ -26,7 +26,7 @@ return [
     /**
      * Defines the display type for the translatable tabs.
      *
-     * Available options are: 'row', 'column', 'none'
+     * Available options are: 'row', 'column', 'none', 'row-left'
      */
     'display_type' => 'row',
 

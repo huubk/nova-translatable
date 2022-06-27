@@ -28,6 +28,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['flex', 'flex-col'];
+      if (this.displayType === 'row-left') return ['flex', 'flex-col', 'justify-items-start'];
       return [];
     },
   },
