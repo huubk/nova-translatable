@@ -28,7 +28,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
-      if (this.displayType === 'row-left') return ['flex', 'justify-items-start'];
+      if (this.displayType === 'row-left') return ['mt-1 md:mt-0 pb-5 px-6 md:px-8 w-full md:w-3/5 md:py-5'];
       return ['ml-auto'];
     },
   },
