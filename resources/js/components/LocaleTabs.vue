@@ -4,7 +4,7 @@
     class="nova-translatable-locale-tabs flex select-none"
     :class="{ 'px-8': !this.detail }"
   >
-    <div class="ml-auto" :class="listClasses" v-if="displayType != 'none'">
+    <div :class="listClasses" v-if="displayType != 'none'">
       <a
         v-for="locale in locales"
         :key="locale.key"
@@ -27,9 +27,9 @@ export default {
   props: ['locales', 'activeLocale', 'displayType', 'detail', 'errors', 'errorAttributes', 'localesWithErrors'],
   computed: {
     listClasses() {
-      if (this.displayType === 'column') return ['flex', 'flex-col'];
+      if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
       if (this.displayType === 'row-left') return ['flex', 'justify-items-start'];
-      return [];
+      return ['ml-auto'];
     },
   },
 
