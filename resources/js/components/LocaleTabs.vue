@@ -4,7 +4,7 @@
     class="nova-translatable-locale-tabs field-wrapper flex flex-col border-b border-gray-100 dark:border-gray-700 md:flex-row"
     :class="{ 'px-8': !this.detail }"
   >
-    <div class="px-6 md:px-8 mt-2 md:mt-0 w-full md:w-1/5 md:py-5">&nbsp;</div>
+    <div class=" w-full md:w-1/5 ">&nbsp;</div>
     <div :class="listClasses" v-if="displayType != 'none'">
       <a
         v-for="locale in locales"
@@ -29,7 +29,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
-      if (this.displayType === 'row-left') return ['mt-1 md:mt-0 pb-5 px-6 md:px-8 w-full md:w-3/5 md:py-5'];
+      if (this.displayType === 'row-left') return ['w-full md:w-3/5 md:py-5'];
       return ['ml-auto'];
     },
   },
