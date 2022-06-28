@@ -4,7 +4,7 @@
     class="nova-translatable-locale-tabs grid grid-cols-5"
     :class="{ 'px-8': !this.detail }"
   >
-    <div class="col-span-5 md:col-span-1"></div>
+    <div class="col-span-5 md:col-span-1">&nbsp;</div>
     <div :class="listClasses" v-if="displayType != 'none'">
       <a
         v-for="locale in locales"
