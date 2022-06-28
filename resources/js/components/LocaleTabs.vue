@@ -29,7 +29,7 @@ export default {
   computed: {
     listClasses() {
       if (this.displayType === 'column') return ['ml-auto','flex', 'flex-col'];
-      if (this.displayType === 'row-left') return ['w-full md:w-3/5 md:py-5'];
+      if (this.displayType === 'row-left') return ['w-full md:w-3/5'];
       return ['ml-auto'];
     },
   },
