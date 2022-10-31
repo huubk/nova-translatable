@@ -9,6 +9,7 @@
       <a
         v-for="locale in locales"
         :key="locale.key"
+        :dusk="errorAttributes[locale.key] + '.locale.tab'"
         class="locale-tag ml-3 cursor-pointer font-bold text-80 text-sm"
         :class="{
           '-active': locale.key === activeLocale,
